@@ -13,8 +13,6 @@ const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-
-       
         <Route element={<Layout />}>
           <Route path="/" element={<LandingPage />} />
           <Route path="/dashboard" element={<Dashboard />} />
