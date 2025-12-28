@@ -1,13 +1,16 @@
 import { ArrowRight, BarChart3, ShieldCheck, Zap } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
+import LandingSection2 from "./section2";
+import LandingSection3 from "./section3";
+import LandingSection4 from "./section4";
 
 const LandingPage = () => {
   const navigate = useNavigate();
   const handleNavigate = () => {
     navigate("/dashboard");
   };
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   return (
     <main className="relative bg-white w-full">
@@ -41,7 +44,13 @@ const LandingPage = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.15] text-slate-900 mb-6 tracking-tight">
               <span className="text-emerald-600">{t("hero_brand")}</span>
               <br />
-              <span className="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-800">
+              <span
+                className={`font-bold text-slate-800 ${
+                  i18n.language === "zh"
+                    ? "text-2xl md:text-3xl lg:text-4xl"
+                    : "text-xl md:text-2xl lg:text-3xl"
+                }`}
+              >
                 {t("hero_title")}
               </span>
             </h1>
@@ -135,8 +144,10 @@ const LandingPage = () => {
           </div>
         </div>
       </section>
-
-      <section className="py-24 bg-slate-50/40 px-8 border-t border-slate-50"></section>
+      {/* SECTION 2: SOLUTIONS (NEW) */}
+      <LandingSection2></LandingSection2>
+      <LandingSection3></LandingSection3>
+      <LandingSection4></LandingSection4>
     </main>
   );
 };
