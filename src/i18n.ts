@@ -1,6 +1,6 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
-
+import { supplier } from "./i18n_detail/supplier";
 // 翻译资源文件 (假数据示例)
 const resources = {
   en: {
@@ -131,6 +131,7 @@ const resources = {
         trend: "Trend",
         emissions: "Emissions",
       },
+      supplier: supplier.en.supplier,
     },
   },
   zh: {
@@ -250,6 +251,7 @@ const resources = {
         trend: "趋势分析",
         emissions: "碳排放量",
       },
+      supplier: supplier.zh.supplier,
     },
   },
 };
