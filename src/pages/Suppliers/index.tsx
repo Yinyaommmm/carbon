@@ -4,6 +4,7 @@ import { MOCK_SUPPLIERS } from "./mockdata";
 import { ChevronDown, Factory, Globe, Search } from "lucide-react";
 import { CustomSelect } from "./select";
 import { ComplianceBadge } from "./badge";
+import { useNavigate } from "react-router-dom";
 
 export default function Suppliers() {
   const { t } = useTranslation();
@@ -31,9 +32,9 @@ export default function Suppliers() {
       return matchSearch && matchIndustry && matchCountry && matchCompliance;
     });
   }, [searchTerm, filterIndustry, filterCountry, filterCompliance]);
-
+  const navigate = useNavigate();
   const handleRowClick = (id: string) => {
-    console.log(`Navigating to /supplier/${id}`);
+    navigate("/suppliers/" + id);
   };
 
   return (
