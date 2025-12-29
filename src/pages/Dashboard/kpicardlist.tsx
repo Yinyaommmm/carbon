@@ -30,23 +30,23 @@ export default function KPICardList({
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 mb-8">
       <KPICard
-        title={t("kpi_carbon")}
+        title={t("dashboard.kpi_carbon")}
         value={carbon}
-        unit={t("unit_carbon")}
+        unit={t("dashboard.unit_carbon")}
         trend="+2.4%"
         icon={<Activity size={20} />}
         color="emerald"
       />
       <KPICard
-        title={t("kpi_energy")}
+        title={t("dashboard.kpi_energy")}
         value={energy}
-        unit={t("unit_energy")}
+        unit={t("dashboard.unit_energy")}
         trend="-1.2%"
         icon={<Zap size={20} />}
         color="blue"
       />
       <KPICard
-        title={t("kpi_pcf")}
+        title={t("dashboard.kpi_pcf")}
         value={pcf}
         unit="kgCO2"
         trend="-5.0%"
@@ -54,16 +54,16 @@ export default function KPICardList({
         color="indigo"
       />
       <KPICard
-        title={t("kpi_saving")}
+        title={t("dashboard.kpi_saving")}
         value={saving}
         unit="%"
-        trend={t("AI_Prediction")}
+        trend={t("dashboard.AI_Prediction")}
         icon={<TrendingDown size={20} />}
         color="emerald"
         highlight
       />
       <KPICard
-        title={t("kpi_risk")}
+        title={t("dashboard.kpi_risk")}
         value={risk}
         unit=""
         icon={<AlertTriangle size={20} />}
@@ -71,7 +71,7 @@ export default function KPICardList({
         isStatus
       />
       <KPICard
-        title={t("kpi_suppliers")}
+        title={t("dashboard.kpi_suppliers")}
         value={suppliers}
         unit=""
         icon={<Users size={20} />}

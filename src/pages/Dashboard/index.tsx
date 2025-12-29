@@ -59,7 +59,7 @@ const Dashboard = () => {
       energy: (random(150, 200) / 10).toFixed(1) + "M",
       pcf: (random(20, 30) / 10).toFixed(1),
       saving: (random(50, 120) / 10).toFixed(1),
-      risk: seed % 3 === 0 ? t("risk_low") : t("risk_med"),
+      risk: seed % 3 === 0 ? t("dashboard.risk_low") : t("dashboard.risk_med"),
       riskColor: seed % 3 === 0 ? "emerald" : "orange",
       suppliers: random(80, 150),
       trendData: trendPoints,
@@ -107,18 +107,20 @@ const Dashboard = () => {
           <div>
             <h1 className="text-2xl md:text-3xl font-black text-slate-900 tracking-tight flex items-center gap-3">
               <div className="w-2 h-8 bg-emerald-500 rounded-full"></div>
-              {t("dash_title")}
+              {t("dashboard.dash_title")}
             </h1>
-            <p className="text-slate-500 text-sm mt-1">{t("dash_subtitle")}</p>
+            <p className="text-slate-500 text-sm mt-1">
+              {t("dashboard.dash_subtitle")}
+            </p>
           </div>
           <div className="flex items-center gap-2 text-xs font-bold text-emerald-600 bg-emerald-50 px-3 py-1.5 rounded-full border border-emerald-100">
             <span className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
             {selectedBrand} ·{" "}
             {selectedIndustry === "Textile"
-              ? t("ind_textile")
+              ? t("dashboard.ind_textile")
               : selectedIndustry === "Auto"
-              ? t("ind_auto")
-              : t("ind_electronics")}
+              ? t("dashboard.ind_auto")
+              : t("dashboard.ind_electronics")}
           </div>
         </div>
 
@@ -174,10 +176,10 @@ const Dashboard = () => {
               className="flex items-center justify-between w-44 px-4 py-2 bg-slate-50 border border-slate-100 rounded-xl text-sm font-semibold text-slate-700 hover:border-emerald-200 transition-all"
             >
               {selectedIndustry === "Textile"
-                ? t("ind_textile")
+                ? t("dashboard.ind_textile")
                 : selectedIndustry === "Auto"
-                ? t("ind_auto")
-                : t("ind_electronics")}
+                ? t("dashboard.ind_auto")
+                : t("dashboard.ind_electronics")}
               <ChevronDown
                 size={14}
                 className={`text-slate-400 transition-transform ${
@@ -188,9 +190,9 @@ const Dashboard = () => {
             {showIndustryDropdown && (
               <div className="absolute top-full mt-2 w-44 bg-white border border-slate-100 rounded-xl shadow-xl overflow-hidden">
                 {[
-                  { id: "Textile", label: t("ind_textile") },
-                  { id: "Auto", label: t("ind_auto") },
-                  { id: "Electronics", label: t("ind_electronics") },
+                  { id: "Textile", label: t("dashboard.ind_textile") },
+                  { id: "Auto", label: t("dashboard.ind_auto") },
+                  { id: "Electronics", label: t("dashboard.ind_electronics") },
                 ].map((ind) => (
                   <button
                     key={ind.id}
@@ -221,7 +223,7 @@ const Dashboard = () => {
                   : "text-slate-500 hover:text-slate-700"
               }`}
             >
-              {t("time_30")}
+              {t("dashboard.time_30")}
             </button>
             <button
               onClick={() => setTimeRange("12m")}
@@ -231,7 +233,7 @@ const Dashboard = () => {
                   : "text-slate-500 hover:text-slate-700"
               }`}
             >
-              {t("time_12")}
+              {t("dashboard.time_12")}
             </button>
           </div>
         </div>
@@ -254,7 +256,7 @@ const Dashboard = () => {
           <div className="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm flex flex-col">
             <h3 className="font-bold text-slate-800 flex items-center gap-2 mb-4 text-lg">
               <PieChartIcon size={20} className="text-blue-500" />
-              {t("chart_scope")}
+              {t("dashboard.chart_scope")}
             </h3>
 
             <div className="flex-1 min-h-[300px] flex items-center justify-center">
@@ -280,7 +282,7 @@ const Dashboard = () => {
               <div className="absolute flex flex-col items-center justify-center pointer-events-none">
                 <div className="text-2xl font-black text-slate-800">100%</div>
                 <div className="text-[12px] font-bold text-slate-400 uppercase tracking-widest">
-                  {t("Global")}
+                  {t("dashboard.Global")}
                 </div>
               </div>
             </div>
@@ -307,23 +309,23 @@ const Dashboard = () => {
           <div className="lg:col-span-3 bg-white p-6 rounded-3xl border border-slate-200 shadow-sm">
             <h3 className="font-bold text-slate-800 flex items-center gap-2 mb-8 text-lg">
               <Factory size={20} className="text-indigo-500" />
-              {t("chart_compare")}
+              {t("dashboard.chart_compare")}
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
               <IndustryBar
-                label={t("ind_textile")}
+                label={t("dashboard.ind_textile")}
                 value={selectedIndustry === "Textile" ? "8.2M" : "6.1M"}
                 percent={selectedIndustry === "Textile" ? 85 : 55}
                 color="bg-emerald-500"
               />
               <IndustryBar
-                label={t("ind_auto")}
+                label={t("dashboard.ind_auto")}
                 value={selectedIndustry === "Auto" ? "9.4M" : "5.2M"}
                 percent={selectedIndustry === "Auto" ? 95 : 45}
                 color="bg-blue-500"
               />
               <IndustryBar
-                label={t("ind_electronics")}
+                label={t("dashboard.ind_electronics")}
                 value={selectedIndustry === "Electronics" ? "7.8M" : "4.6M"}
                 percent={selectedIndustry === "Electronics" ? 80 : 40}
                 color="bg-indigo-500"

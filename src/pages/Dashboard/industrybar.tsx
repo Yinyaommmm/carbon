@@ -28,7 +28,7 @@ export default function IndustryBar({
       <div className="flex justify-between items-end">
         <div>
           <span className="block text-xs font-black text-slate-400 uppercase mb-1">
-            {t("Sector")}
+            {t("dashboard.Sector")}
           </span>
           <span className="text-sm font-bold text-slate-800">{label}</span>
         </div>
@@ -37,7 +37,7 @@ export default function IndustryBar({
             {value}
           </span>
           <span className="block text-[9px] text-slate-400 font-bold uppercase tracking-tighter">
-            {t("used_kwh")}
+            {t("dashboard.used_kwh")}
           </span>
         </div>
       </div>

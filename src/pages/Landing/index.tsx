@@ -42,7 +42,9 @@ const LandingPage = () => {
 
           <div className="relative z-10 max-w-xl">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.15] text-slate-900 mb-6 tracking-tight">
-              <span className="text-emerald-600">{t("hero_brand")}</span>
+              <span className="text-emerald-600">
+                {t("landing.sec1.hero_brand")}
+              </span>
               <br />
               <span
                 className={`font-bold text-slate-800 ${
@@ -51,17 +53,17 @@ const LandingPage = () => {
                     : "text-xl md:text-2xl lg:text-3xl"
                 }`}
               >
-                {t("hero_title")}
+                {t("landing.sec1.hero_title")}
               </span>
             </h1>
 
             <p className="text-lg text-slate-600 leading-relaxed mb-10 border-l-4 border-emerald-500 pl-4">
-              {t("hero_description")}
+              {t("landing.sec1.hero_description")}
               <span className="font-semibold text-slate-800 italic">
                 {" "}
                 lloT + Blockchain + AI{" "}
               </span>
-              {t("hero_tech_suffix")}
+              {t("landing.sec1.hero_tech_suffix")}
             </p>
 
             <div className="flex flex-wrap gap-4 mb-12">
@@ -69,11 +71,11 @@ const LandingPage = () => {
                 onClick={handleNavigate}
                 className="group flex items-center gap-2 px-8 py-4 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl font-bold text-lg transition-all duration-300 shadow-lg shadow-emerald-200 hover:translate-y-[-2px] active:scale-95"
               >
-                {t("btn_start")}
+                {t("landing.sec1.btn_start")}
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
               <button className="px-8 py-4 bg-white border border-slate-200 hover:border-emerald-200 hover:bg-emerald-50 text-slate-700 rounded-xl font-bold text-lg transition-all">
-                {t("btn_whitepaper")}
+                {t("landing.sec1.btn_whitepaper")}
               </button>
             </div>
 
@@ -85,7 +87,7 @@ const LandingPage = () => {
                   <span className="text-sm tracking-tight">Real-time</span>
                 </div>
                 <div className="text-xs md:text-sm text-slate-500 font-medium">
-                  {t("feat_realtime")}
+                  {t("landing.sec1.feat_realtime")}
                 </div>
               </div>
               <div className="flex flex-col gap-1">
@@ -94,7 +96,7 @@ const LandingPage = () => {
                   <span className="text-sm tracking-tight">Verified</span>
                 </div>
                 <div className="text-xs md:text-sm text-slate-500 font-medium">
-                  {t("feat_verified")}
+                  {t("landing.sec1.feat_verified")}
                 </div>
               </div>
               <div className="flex flex-col gap-1">
@@ -103,7 +105,7 @@ const LandingPage = () => {
                   <span className="text-sm tracking-tight">Global</span>
                 </div>
                 <div className="text-xs md:text-sm text-slate-500 font-medium">
-                  {t("feat_global")}
+                  {t("landing.sec1.feat_global")}
                 </div>
               </div>
             </div>
@@ -125,7 +127,7 @@ const LandingPage = () => {
             <div className="absolute bottom-6 right-6 z-20 bg-white/95 backdrop-blur-sm p-5 rounded-2xl shadow-2xl border border-white/40 hidden md:flex gap-8 items-center">
               <div className="flex flex-col">
                 <span className="text-[10px] uppercase tracking-widest text-slate-400 font-bold mb-1">
-                  {t("stat_carbon")}
+                  {t("landing.sec1.stat_carbon")}
                 </span>
                 <span className="text-emerald-600 font-mono font-bold text-xl tracking-tight">
                   12,482.5 t
@@ -134,7 +136,7 @@ const LandingPage = () => {
               <div className="w-px h-10 bg-slate-200"></div>
               <div className="flex flex-col">
                 <span className="text-[10px] uppercase tracking-widest text-slate-400 font-bold mb-1">
-                  {t("stat_eff")}
+                  {t("landing.sec1.stat_eff")}
                 </span>
                 <span className="text-blue-600 font-mono font-bold text-xl tracking-tight">
                   +22.4%

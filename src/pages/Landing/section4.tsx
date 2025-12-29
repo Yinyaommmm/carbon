@@ -10,11 +10,11 @@ export default function LandingSection4() {
         <div className="flex flex-col md:flex-row justify-between items-end gap-8 mb-16">
           <div className="flex-1 text-left flex flex-col items-start">
             <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-3 tracking-tight">
-              {t("sec4_main_title")}
+              {t("landing.sec4.sec4_main_title")}
             </h2>
             <div className="inline-block">
               <p className="text-slate-500 text-base font-medium">
-                {t("sec4_main_subtitle")}
+                {t("landing.sec4.sec4_main_subtitle")}
               </p>
               <div className="h-1 bg-emerald-500 mt-2 rounded-full w-full"></div>
             </div>
@@ -43,17 +43,17 @@ export default function LandingSection4() {
             </div>
             <div>
               <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">
-                {t("sec4_market_title")}
+                {t("landing.sec4.sec4_market_title")}
               </h3>
               <p className="text-slate-800 font-bold text-lg mb-4 leading-snug">
-                {t("sec4_market_desc")}
+                {t("landing.sec4.sec4_market_desc")}
               </p>
               <div className="flex flex-wrap gap-2">
                 <div className="inline-flex items-center px-2.5 py-1 bg-emerald-100 text-emerald-700 text-[10px] font-black rounded-lg uppercase tracking-wider">
-                  {t("sec4_market_stat")}
+                  {t("landing.sec4.sec4_market_stat")}
                 </div>
                 <div className="inline-flex items-center px-2.5 py-1 bg-slate-100 text-slate-600 text-[10px] font-black rounded-lg uppercase tracking-wider">
-                  {t("sec4_market_tag2")}
+                  {t("landing.sec4.sec4_market_tag2")}
                 </div>
               </div>
             </div>
@@ -66,28 +66,28 @@ export default function LandingSection4() {
             </div>
             <div className="flex-1">
               <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">
-                {t("sec4_value_title")}
+                {t("landing.sec4.sec4_value_title")}
               </h3>
               <div className="flex flex-col gap-3 mb-4">
                 <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
                   <span className="text-slate-400 font-medium line-through decoration-slate-300 text-sm">
-                    {t("sec4_value_burden")}
+                    {t("landing.sec4.sec4_value_burden")}
                   </span>
                   <ArrowRight
                     size={16}
                     className="text-emerald-500 hidden sm:block"
                   />
                   <p className="text-slate-900 font-extrabold text-lg leading-tight">
-                    {t("sec4_value_gain")}
+                    {t("landing.sec4.sec4_value_gain")}
                   </p>
                 </div>
               </div>
               <div className="flex flex-wrap gap-2">
                 <div className="inline-flex items-center px-2.5 py-1 bg-emerald-100 text-emerald-700 text-[10px] font-black rounded-lg uppercase tracking-wider">
-                  {t("sec4_value_tag1")}
+                  {t("landing.sec4.sec4_value_tag1")}
                 </div>
                 <div className="inline-flex items-center px-2.5 py-1 bg-indigo-50 text-indigo-600 text-[10px] font-black rounded-lg uppercase tracking-wider border border-indigo-100">
-                  {t("sec4_value_tag2")}
+                  {t("landing.sec4.sec4_value_tag2")}
                 </div>
               </div>
             </div>

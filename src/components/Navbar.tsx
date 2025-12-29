@@ -1,6 +1,6 @@
 // components/Navbar.tsx
 
-import React, { useState } from "react";
+import React from "react";
 import { NavLink, useLocation, useMatch } from "react-router-dom";
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 import { Menu, ChevronDown, Globe } from "lucide-react";
@@ -32,7 +32,7 @@ const dropdownItems = {
 
 // Tailwind 类：用于 DropdownMenu 内容的通用样式
 const dropdownContentClasses =
-  "bg-white rounded-md p-1 shadow-lg z-50 min-w-[160px] border border-gray-100";
+  "bg-white rounded-md p-1 shadow-lg z-100 min-w-[160px] border border-gray-100";
 
 // Dropdown 内部链接的样式
 const dropdownItemClass = ({ isActive }: { isActive: boolean }) =>
@@ -105,7 +105,6 @@ const Navbar = () => {
     const newLang = currentLang === "zh" ? "en" : "zh";
     // 使用 i18n.changeLanguage 方法切换，这将触发组件重新渲染
     i18n.changeLanguage(newLang);
-    console.log(newLang);
   };
 
   /**
@@ -136,7 +135,7 @@ const Navbar = () => {
       {/* 外部 div 铺满宽度 */}
       <div className="w-full px-4 sm:px-6 lg:px-8">
         {/* 内部 div 居中内容 */}
-        <div className="flex justify-between items-center h-16 max-w-[1440px] ">
+        <div className="flex justify-between items-center h-16 max-w-full">
           {/* 左侧：品牌 LOGO/名称 */}
           <NavLink
             to="/"
@@ -154,12 +153,12 @@ const Navbar = () => {
             {/* 1. 普通导航项 (直接使用 navLinkClass 函数) */}
             {navItems.map((item) => (
               <NavLink key={item.path} to={item.path} className={navLinkClass}>
-                {t(item.name)}
+                {t("navbar." + item.name)}
               </NavLink>
             ))}
 
             {/* 2. 下拉菜单项 (Value & Enablement) */}
-            <DropdownMenu.Root>
+            <DropdownMenu.Root modal={false}>
               {/* 使用 DropdownMenu.Trigger 渲染 Button */}
               <DropdownMenu.Trigger asChild>
                 {/* 使用 data-state 监听打开状态，并应用到 trigger 的样式 */}
@@ -169,9 +168,9 @@ const Navbar = () => {
                   // 这是一个常见的 Radix 模式。
                   className={dropdownTriggerClass(false)} // isOpen 默认传入 false，让内部逻辑根据 data-state 判断
                   // data-state={dropdownItems.subItems.some(item => location.pathname.startsWith(item.path)) ? 'open' : undefined}
-                  aria-label={t(dropdownItems.name)}
+                  aria-label={t("navbar." + dropdownItems.name)}
                 >
-                  {t(dropdownItems.name)}{" "}
+                  {t("navbar." + dropdownItems.name)}{" "}
                   <ChevronDown className="ml-1 w-3 h-3 transition-transform " />
                 </button>
               </DropdownMenu.Trigger>
@@ -187,7 +186,7 @@ const Navbar = () => {
                     <DropdownLink
                       key={subItem.path}
                       path={subItem.path}
-                      name={t(subItem.name)}
+                      name={t("navbar." + subItem.name)}
                       dropdownItemClass={dropdownItemClass} // 传入样式函数
                     />
                   ))}
@@ -197,7 +196,7 @@ const Navbar = () => {
 
             {/* 3. Settings 独立链接 */}
             <NavLink to="/settings" className={navLinkClass}>
-              {t("nav_settings")}
+              {t("navbar.nav_settings")}
             </NavLink>
           </div>
 
@@ -210,7 +209,7 @@ const Navbar = () => {
             >
               <Globe className="w-5 h-5" />
               <span className="ml-1 text-sm font-medium">
-                {t("cur_lang")}: {t("language_switch")}
+                {t("navbar.cur_lang")}: {t("navbar.language_switch")}
               </span>
             </button>
 

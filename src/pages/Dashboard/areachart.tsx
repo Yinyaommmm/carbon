@@ -22,10 +22,12 @@ export default function CarbonAreaChart({
       <div className="flex items-center justify-between mb-8">
         <h3 className="font-bold text-slate-800 flex items-center gap-2 text-lg">
           <Activity size={20} className="text-emerald-500" />
-          {t("chart_trend")}
+          {t("dashboard.chart_trend")}
         </h3>
         <div className="text-[12px] font-black text-slate-400 bg-slate-50 px-2 py-1 rounded">
-          {timeRange === "30d" ? t("SAMPLING") : t("MONTHLY_AGGREGATED")}
+          {timeRange === "30d"
+            ? t("dashboard.SAMPLING")
+            : t("dashboard.MONTHLY_AGGREGATED")}
         </div>
       </div>
 
@@ -76,11 +78,16 @@ export default function CarbonAreaChart({
               // 修改顶部的标签名称 (例如: 1st 数据统计 或 Jan Trend)
               labelFormatter={(label) => {
                 const suffix =
-                  timeRange === "30d" ? t("chart.stats") : t("chart.trend");
+                  timeRange === "30d"
+                    ? t("dashboard.chart.stats")
+                    : t("dashboard.chart.trend");
                 return `${label} ${suffix}`;
               }}
               // 修改数值显示 (例如: 125 t CO2 : 碳排放量)
-              formatter={(value) => [`${value} t CO₂`, t("chart.emissions")]}
+              formatter={(value) => [
+                `${value} t CO₂`,
+                t("dashboard.chart.emissions"),
+              ]}
               // 建议优化光标线的颜色，使其更柔和
               cursor={{ stroke: "#f1f5f9", strokeWidth: 2 }}
             />

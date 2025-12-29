@@ -28,10 +28,10 @@ export default function LandingSection3() {
       <div className="max-w-7xl mx-auto px-8 relative z-10">
         <div className="text-center mb-4">
           <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-6 tracking-tight">
-            {t("sec3_title")}
+            {t("landing.sec3.sec3_title")}
           </h2>
           <p className="text-slate-500 text-lg max-w-2xl mx-auto">
-            {t("sec3_subtitle")}
+            {t("landing.sec3.sec3_subtitle")}
           </p>
         </div>
 
@@ -41,16 +41,16 @@ export default function LandingSection3() {
             <ModuleCard
               side="right"
               icon={<Link2 size={24} />}
-              title={t("m1_title")}
-              subtitle={t("m1_subtitle")}
-              detail={t("m1_detail")}
+              title={t("landing.sec3.m1_title")}
+              subtitle={t("landing.sec3.m1_subtitle")}
+              detail={t("landing.sec3.m1_detail")}
             />
             <ModuleCard
               side="right"
               icon={<BrainCircuit size={24} />}
-              title={t("m2_title")}
-              subtitle={t("m2_subtitle")}
-              detail={t("m2_detail")}
+              title={t("landing.sec3.m2_title")}
+              subtitle={t("landing.sec3.m2_subtitle")}
+              detail={t("landing.sec3.m2_detail")}
             />
           </div>
 
@@ -85,16 +85,16 @@ export default function LandingSection3() {
             <ModuleCard
               side="left"
               icon={<Coins size={24} />}
-              title={t("m3_title")}
-              subtitle={t("m3_subtitle")}
-              detail={t("m3_detail")}
+              title={t("landing.sec3.m3_title")}
+              subtitle={t("landing.sec3.m3_subtitle")}
+              detail={t("landing.sec3.m3_detail")}
             />
             <ModuleCard
               side="left"
               icon={<ClipboardCheck size={24} />}
-              title={t("m4_title")}
-              subtitle={t("m4_subtitle")}
-              detail={t("m4_detail")}
+              title={t("landing.sec3.m4_title")}
+              subtitle={t("landing.sec3.m4_subtitle")}
+              detail={t("landing.sec3.m4_detail")}
             />
           </div>
         </div>

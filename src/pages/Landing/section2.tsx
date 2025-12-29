@@ -5,20 +5,20 @@ export default function LandingSection2() {
   const { t } = useTranslation();
   const solutions = [
     {
-      title: t("card1_title"),
-      desc: t("card1_desc"),
+      title: t("landing.sec2.card1_title"),
+      desc: t("landing.sec2.card1_desc"),
       icon: <Factory className="text-emerald-500" size={24} />,
       img: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800&auto=format&fit=crop",
     },
     {
-      title: t("card2_title"),
-      desc: t("card2_desc"),
+      title: t("landing.sec2.card2_title"),
+      desc: t("landing.sec2.card2_desc"),
       icon: <Database className="text-blue-500" size={24} />,
       img: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=800&auto=format&fit=crop",
     },
     {
-      title: t("card3_title"),
-      desc: t("card3_desc"),
+      title: t("landing.sec2.card3_title"),
+      desc: t("landing.sec2.card3_desc"),
       icon: <Globe className="text-indigo-500" size={24} />,
       img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=800&auto=format&fit=crop",
     },
@@ -28,10 +28,10 @@ export default function LandingSection2() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-4 tracking-tight">
-            {t("sec2_title")}
+            {t("landing.sec2.sec2_title")}
           </h2>
           <p className="text-slate-500 text-lg max-w-3xl mx-auto">
-            {t("sec2_subtitle")}
+            {t("landing.sec2.sec2_subtitle")}
           </p>
         </div>
 
