@@ -13,13 +13,13 @@ export default function Suppliers() {
   const [filterIndustry, setFilterIndustry] = useState("All");
   const [filterCountry, setFilterCountry] = useState("All");
   const [filterCompliance, setFilterCompliance] = useState("All");
-
-  const industries = ["All", ...new Set(MOCK_SUPPLIERS.map((s) => s.industry))];
-  const countries = ["All", ...new Set(MOCK_SUPPLIERS.map((s) => s.country))];
+  const convertedData = Object.values(MOCK_SUPPLIERS);
+  const industries = ["All", ...new Set(convertedData.map((s) => s.industry))];
+  const countries = ["All", ...new Set(convertedData.map((s) => s.country))];
   const complianceLevels = ["All", "High", "Medium", "Low"];
 
   const filteredSuppliers = useMemo(() => {
-    return MOCK_SUPPLIERS.filter((s) => {
+    return convertedData.filter((s) => {
       const matchSearch = s.name
         .toLowerCase()
         .includes(searchTerm.toLowerCase());
@@ -155,7 +155,7 @@ export default function Suppliers() {
                       </div>
                     </td>
                     <td className="px-8 py-5 text-center text-sm font-black text-slate-800 tracking-tighter">
-                      {s.carbon}
+                      {s.metrics.scope1 + s.metrics.scope2 + s.metrics.scope3}
                     </td>
                     <td className="px-8 py-5">
                       <div className="flex items-center justify-between">

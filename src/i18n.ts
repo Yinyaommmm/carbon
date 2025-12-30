@@ -5,6 +5,7 @@ import { footer } from "./i18n_detail/footer";
 import { navbar } from "./i18n_detail/navbar";
 import { landing } from "./i18n_detail/landingpage";
 import { dashboard } from "./i18n_detail/dashboard";
+import { supplierDetail } from "./i18n_detail/detail";
 // 翻译资源文件 (假数据示例)
 const resources = {
   en: {
@@ -12,22 +13,20 @@ const resources = {
       // Navbar 文本
       navbar: navbar.en.navbar,
       landing: landing.en.landing,
-      // footer
       footer: footer.en.footer,
-      // dashboard
       dashboard: dashboard.en.dashboard,
       supplier: supplier.en.supplier,
+      supplierDetail: supplierDetail.en.supplierDetail,
     },
   },
   zh: {
     translation: {
       navbar: navbar.zh.navbar,
       landing: landing.zh.landing,
-      // footer
       footer: footer.zh.footer,
-      // dashboard
       dashboard: dashboard.zh.dashboard,
       supplier: supplier.zh.supplier,
+      supplierDetail: supplierDetail.zh.supplierDetail,
     },
   },
 };
