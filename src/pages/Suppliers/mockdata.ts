@@ -64,10 +64,10 @@ export const MOCK_SUPPLIERS: Record<string, SupplierDetail> = {
       { month: "Jun", value: 1.2 },
     ],
     process_distribution: [
-      { name: "染整 (Dyeing)", value: 45, color: "#10b981" },
-      { name: "织造 (Weaving)", value: 30, color: "#3b82f6" },
-      { name: "整理 (Finishing)", value: 15, color: "#f59e0b" },
-      { name: "其他 (Others)", value: 10, color: "#94a3b8" },
+      { name: "Dyeing", value: 45, color: "#10b981" },
+      { name: "Weaving", value: 30, color: "#3b82f6" },
+      { name: "Finishing", value: 15, color: "#f59e0b" },
+      { name: "Others", value: 10, color: "#94a3b8" },
     ],
     ai_suggestions: [
       "优化锅炉运行工况，通过余热回收系统预计可节能 6-8%。",
@@ -99,10 +99,10 @@ export const MOCK_SUPPLIERS: Record<string, SupplierDetail> = {
       { month: "Jun", value: 15.5 },
     ],
     process_distribution: [
-      { name: "压铸 (Die-casting)", value: 55, color: "#10b981" },
-      { name: "机加工 (Machining)", value: 25, color: "#3b82f6" },
-      { name: "组装 (Assembly)", value: 10, color: "#f59e0b" },
-      { name: "物流 (Logistics)", value: 10, color: "#94a3b8" },
+      { name: "Die-casting", value: 55, color: "#10b981" },
+      { name: "Machining", value: 25, color: "#3b82f6" },
+      { name: "Assembly", value: 10, color: "#f59e0b" },
+      { name: "Logistics", value: 10, color: "#94a3b8" },
     ],
     ai_suggestions: [
       "压铸机保温炉升级为电加热节能模组，可降低能耗 12%。",
@@ -134,10 +134,10 @@ export const MOCK_SUPPLIERS: Record<string, SupplierDetail> = {
       { month: "Jun", value: 0.45 },
     ],
     process_distribution: [
-      { name: "光刻 (Lithography)", value: 40, color: "#10b981" },
-      { name: "封装 (Packaging)", value: 35, color: "#3b82f6" },
-      { name: "测试 (Testing)", value: 20, color: "#f59e0b" },
-      { name: "清洗 (Cleaning)", value: 5, color: "#94a3b8" },
+      { name: "Lithography", value: 40, color: "#10b981" },
+      { name: "Packaging", value: 35, color: "#3b82f6" },
+      { name: "Testing", value: 20, color: "#f59e0b" },
+      { name: "Cleaning", value: 5, color: "#94a3b8" },
     ],
     ai_suggestions: [
       "超净间空调节能改造，通过变频控制可降低 10% 电耗。",
@@ -169,10 +169,10 @@ export const MOCK_SUPPLIERS: Record<string, SupplierDetail> = {
       { month: "Jun", value: 0.95 },
     ],
     process_distribution: [
-      { name: "纺纱 (Spinning)", value: 50, color: "#10b981" },
-      { name: "织造 (Weaving)", value: 25, color: "#3b82f6" },
-      { name: "后整理 (Finishing)", value: 20, color: "#f59e0b" },
-      { name: "打包 (Packing)", value: 5, color: "#94a3b8" },
+      { name: "Spinning", value: 50, color: "#10b981" },
+      { name: "Weaving", value: 25, color: "#3b82f6" },
+      { name: "Finishing", value: 20, color: "#f59e0b" },
+      { name: "Packing", value: 5, color: "#94a3b8" },
     ],
     ai_suggestions: [
       "该供应商已达到极高能效，建议申请绿色工厂认证。",
@@ -204,10 +204,10 @@ export const MOCK_SUPPLIERS: Record<string, SupplierDetail> = {
       { month: "Jun", value: 450 },
     ],
     process_distribution: [
-      { name: "熔炼 (Smelting)", value: 70, color: "#10b981" },
-      { name: "锻造 (Forging)", value: 15, color: "#3b82f6" },
-      { name: "热处理 (Heat Treatment)", value: 10, color: "#f59e0b" },
-      { name: "其他 (Others)", value: 5, color: "#94a3b8" },
+      { name: "Smelting", value: 70, color: "#10b981" },
+      { name: "Forging", value: 15, color: "#3b82f6" },
+      { name: "Heat Treatment", value: 10, color: "#f59e0b" },
+      { name: "Others", value: 5, color: "#94a3b8" },
     ],
     ai_suggestions: [
       "由于合规性极低，首要任务是安装自动化碳监测系统替代人工申报。",
@@ -239,10 +239,10 @@ export const MOCK_SUPPLIERS: Record<string, SupplierDetail> = {
       { month: "Jun", value: 2.1 },
     ],
     process_distribution: [
-      { name: "SMT 贴片", value: 50, color: "#10b981" },
-      { name: "组装 (Assembly)", value: 20, color: "#3b82f6" },
-      { name: "老化测试 (Aging)", value: 20, color: "#f59e0b" },
-      { name: "包装 (Packaging)", value: 10, color: "#94a3b8" },
+      { name: "SMT", value: 50, color: "#10b981" },
+      { name: "Assembly", value: 20, color: "#3b82f6" },
+      { name: "Aging", value: 20, color: "#f59e0b" },
+      { name: "Packaging", value: 10, color: "#94a3b8" },
     ],
     ai_suggestions: [
       "SMT 回流焊炉采用氮气保护循环，可提升焊接质量并微幅降能。",
@@ -274,10 +274,10 @@ export const MOCK_SUPPLIERS: Record<string, SupplierDetail> = {
       { month: "Jun", value: 2.5 },
     ],
     process_distribution: [
-      { name: "编织 (Knitting)", value: 40, color: "#10b981" },
-      { name: "印染 (Printing)", value: 35, color: "#3b82f6" },
-      { name: "成衣 (Garment)", value: 15, color: "#f59e0b" },
-      { name: "仓储 (Storage)", value: 10, color: "#94a3b8" },
+      { name: "Precision", value: 60, color: "#10b981" },
+      { name: "Coating", value: 20, color: "#3b82f6" },
+      { name: "Inspection", value: 10, color: "#f59e0b" },
+      { name: "Logistics", value: 10, color: "#94a3b8" },
     ],
     ai_suggestions: [
       "水洗工段循环用水比例不足 30%，建议引入中水回用系统。",
@@ -309,10 +309,10 @@ export const MOCK_SUPPLIERS: Record<string, SupplierDetail> = {
       { month: "Jun", value: 12.8 },
     ],
     process_distribution: [
-      { name: "精密加工 (Precision)", value: 60, color: "#10b981" },
-      { name: "表面处理 (Coating)", value: 20, color: "#3b82f6" },
-      { name: "检测 (Inspection)", value: 10, color: "#f59e0b" },
-      { name: "物流 (Logistics)", value: 10, color: "#94a3b8" },
+      { name: "Precision", value: 60, color: "#10b981" },
+      { name: "Coating", value: 20, color: "#3b82f6" },
+      { name: "Inspection", value: 10, color: "#f59e0b" },
+      { name: "Logistics", value: 10, color: "#94a3b8" },
     ],
     ai_suggestions: [
       "优化 CNC 刀具路径，减少切削时间，预计可提升 5% 效率。",
@@ -344,10 +344,10 @@ export const MOCK_SUPPLIERS: Record<string, SupplierDetail> = {
       { month: "Jun", value: 4.2 },
     ],
     process_distribution: [
-      { name: "注塑 (Molding)", value: 50, color: "#10b981" },
-      { name: "喷涂 (Spraying)", value: 20, color: "#3b82f6" },
-      { name: "组装 (Assembly)", value: 20, color: "#f59e0b" },
-      { name: "包装 (Packaging)", value: 10, color: "#94a3b8" },
+      { name: "Molding", value: 50, color: "#10b981" },
+      { name: "Spraying", value: 20, color: "#3b82f6" },
+      { name: "Assembly", value: 20, color: "#f59e0b" },
+      { name: "Packaging", value: 10, color: "#94a3b8" },
     ],
     ai_suggestions: [
       "注塑机液压驱动升级为全电驱动，能效可提升 30% 以上。",
@@ -379,10 +379,10 @@ export const MOCK_SUPPLIERS: Record<string, SupplierDetail> = {
       { month: "Jun", value: 95.0 },
     ],
     process_distribution: [
-      { name: "焊接 (Welding)", value: 40, color: "#10b981" },
-      { name: "重型冲压 (Stamping)", value: 35, color: "#3b82f6" },
-      { name: "涂装 (Painting)", value: 15, color: "#f59e0b" },
-      { name: "总装 (Final Assy)", value: 10, color: "#94a3b8" },
+      { name: "Welding", value: 40, color: "#10b981" },
+      { name: "Stamping", value: 35, color: "#3b82f6" },
+      { name: "Painting", value: 15, color: "#f59e0b" },
+      { name: "Final Assy", value: 10, color: "#94a3b8" },
     ],
     ai_suggestions: [
       "合规性风险极高，急需建立碳资产管理制度以应对碳关税。",

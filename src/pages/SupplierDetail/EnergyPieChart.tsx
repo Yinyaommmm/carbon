@@ -6,19 +6,31 @@ import {
   Legend,
   PieChart as RePieChart,
 } from "recharts";
-
-export const EnergyPieChart = ({ data }) => {
+import type { ProcessDistribution } from "../Suppliers/mockdata";
+import { t } from "i18next";
+interface EnergyPieChartProps {
+  data: ProcessDistribution[];
+}
+export const EnergyPieChart = ({ data }: EnergyPieChartProps) => {
+  const convertedData = data.map((item, index) => {
+    return {
+      ...item,
+      name: t(`supplierDetail.process.${item.name}`),
+      index,
+    };
+  });
   return (
-    <div className="w-full h-64 mt-4 flex flex-col items-center relative -top-4">
+    <div className="w-full h-68 mt-4 flex flex-col items-center relative -top-4">
       <ResponsiveContainer width="100%" height="100%">
         <RePieChart>
           <Pie
-            data={data}
+            data={convertedData}
             cx="50%"
             cy="50%"
             innerRadius={70}
             outerRadius={90}
             paddingAngle={5}
+            cornerRadius={4}
             dataKey="value"
           >
             {data.map((entry, index) => (

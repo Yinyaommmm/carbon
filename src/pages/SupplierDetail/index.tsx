@@ -1,6 +1,5 @@
 import {
   ArrowLeft,
-  ShieldCheck,
   Factory,
   Globe,
   Cpu,
@@ -13,12 +12,14 @@ import {
   type LucideIcon,
   ChevronDown,
 } from "lucide-react";
+import * as Popover from "@radix-ui/react-popover";
 import { useNavigate, useParams } from "react-router-dom";
 import { MOCK_SUPPLIERS } from "../Suppliers/mockdata";
 import { EnergyLineChart } from "./EnergyLineChart";
 import { EnergyPieChart } from "./EnergyPieChart";
 import { useTranslation } from "react-i18next";
-import { ComplianceBadge } from "../Suppliers/badge";
+import { ComplianceBadge, type ComplianceLevel } from "../Suppliers/badge";
+import { toast } from "sonner";
 interface MetricCardProps {
   icon: LucideIcon;
   label: string;
@@ -57,6 +58,11 @@ const SupplierDetail = () => {
 
   const sid = id ?? "S001";
   const data = MOCK_SUPPLIERS[sid] || MOCK_SUPPLIERS["S001"];
+  const styles: Record<ComplianceLevel, string> = {
+    High: " text-emerald-700 border-emerald-100",
+    Medium: " text-orange-700 border-orange-100",
+    Low: " text-rose-700 border-rose-100",
+  };
 
   return (
     <div className="min-h-screen bg-slate-50/50 p-6 md:p-10 font-sans text-slate-900">
@@ -110,13 +116,19 @@ const SupplierDetail = () => {
               <div className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">
                 {t("supplierDetail.esgScore")}
               </div>
-              <div className="text-5xl font-black text-emerald-500 tracking-tighter">
+              <div
+                className={`text-5xl font-black ${
+                  styles[data.compliance]
+                } tracking-tighter`}
+              >
                 {data.metrics.esg_score}
               </div>
             </div>
           </div>
 
-          <div className="bg-emerald-600 p-8 rounded-[40px] shadow-xl shadow-emerald-600/20 flex flex-col justify-between relative overflow-hidden group">
+          <div
+            className={`bg-emerald-600 p-8 rounded-[40px] shadow-xl shadow-emerald-600/20 flex flex-col justify-between relative overflow-hidden group`}
+          >
             <Sparkles className="absolute -top-5 -right-5 text-white/10 w-40 h-40 transition-transform group-hover:scale-110" />
             <div className="relative z-10 mb-4">
               <div className="flex items-center gap-2 mb-4">
@@ -137,7 +149,12 @@ const SupplierDetail = () => {
                 <span className="text-white font-black">7.4%</span>。
               </p>
             </div>
-            <button className="relative z-10 w-full py-3 bg-white text-emerald-700 text-xs font-black rounded-2xl hover:bg-emerald-50 transition-colors">
+            <button
+              onClick={() =>
+                toast.warning(t("supplierDetail.featureNotImplemented"))
+              }
+              className="relative z-10 w-full py-3 bg-white text-emerald-700 text-xs font-black rounded-2xl hover:bg-emerald-50 transition-colors"
+            >
               {t("supplierDetail.downloadReport")}
             </button>
           </div>
@@ -247,7 +264,7 @@ const SupplierDetail = () => {
         {/* 底部备注 */}
         <div className="mt-12 text-center">
           <p className="text-[10px] font-black text-slate-300 uppercase tracking-widest">
-            {t("supplierDetail.lastUpdate")}: 2024-06-15 14:30 GMT+8
+            {t("supplierDetail.lastUpdate")}: 2025-12-30 14:30 GMT+8
           </p>
         </div>
       </div>

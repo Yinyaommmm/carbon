@@ -16,7 +16,7 @@ export const EnergyLineChart = ({ data }: EnergyLineChartProps) => {
     return { month: t(`supplierDetail.${item.month}`), value: item.value };
   });
   return (
-    <div className="w-full h-64 mt-4">
+    <div className="w-full h-68 mt-4">
       <ResponsiveContainer width="100%" height="100%">
         <ReLineChart
           data={convertedData}
@@ -35,6 +35,7 @@ export const EnergyLineChart = ({ data }: EnergyLineChartProps) => {
             dy={10}
           />
           <YAxis
+            domain={["auto", "auto"]}
             axisLine={false}
             tickLine={false}
             tick={{ fill: "#94a3b8", fontSize: 10, fontWeight: 700 }}
@@ -50,6 +51,10 @@ export const EnergyLineChart = ({ data }: EnergyLineChartProps) => {
               fontSize: "12px",
               fontWeight: "bold",
               color: "#10b981",
+            }}
+            formatter={(value, name, props) => {
+              // value 是当前数值, name 是原本的 key 名
+              return [`${value} kWh/unit`];
             }}
           />
           <Line
