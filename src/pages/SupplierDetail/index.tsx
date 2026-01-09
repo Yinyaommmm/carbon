@@ -106,7 +106,7 @@ const SupplierDetail = () => {
                 </div>
                 <div className="flex items-center gap-2">
                   <Cpu size={16} className="text-slate-300" />{" "}
-                  {t("supplier.industries." + data.industry.toLowerCase())}
+                  {t("ustries." + data.industry.toLowerCase())}
                 </div>
                 <div className="flex items-center gap-2">
                   <Scale size={16} className="text-slate-300" /> {data.scale}

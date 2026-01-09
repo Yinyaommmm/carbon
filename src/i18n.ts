@@ -4,6 +4,7 @@ import { supplier } from "./i18n_detail/supplier";
 import { footer } from "./i18n_detail/footer";
 import { navbar } from "./i18n_detail/navbar";
 import { landing } from "./i18n_detail/landingpage";
+import { greenFiance } from "./i18n_detail/greenFiance";
 import { dashboard } from "./i18n_detail/dashboard";
 import { supplierDetail } from "./i18n_detail/detail";
 // 翻译资源文件 (假数据示例)
@@ -17,6 +18,7 @@ const resources = {
       dashboard: dashboard.en.dashboard,
       supplier: supplier.en.supplier,
       supplierDetail: supplierDetail.en.supplierDetail,
+      greenFiance: greenFiance.en.greenFiance,
     },
   },
   zh: {
@@ -27,6 +29,7 @@ const resources = {
       dashboard: dashboard.zh.dashboard,
       supplier: supplier.zh.supplier,
       supplierDetail: supplierDetail.zh.supplierDetail,
+      greenFiance: greenFiance.zh.greenFiance,
     },
   },
 };
