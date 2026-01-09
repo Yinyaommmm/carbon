@@ -101,10 +101,12 @@ const SupplierDetail = () => {
               </div>
               <div className="flex flex-wrap gap-6 text-sm font-bold text-slate-500">
                 <div className="flex items-center gap-2">
-                  <Globe size={16} className="text-slate-300" /> {data.country}
+                  <Globe size={16} className="text-slate-300" />{" "}
+                  {t("supplier.countries." + data.country.toLowerCase())}
                 </div>
                 <div className="flex items-center gap-2">
-                  <Cpu size={16} className="text-slate-300" /> {data.industry}
+                  <Cpu size={16} className="text-slate-300" />{" "}
+                  {t("supplier.industries." + data.industry.toLowerCase())}
                 </div>
                 <div className="flex items-center gap-2">
                   <Scale size={16} className="text-slate-300" /> {data.scale}
