@@ -12,7 +12,7 @@ export const supplierDetail = {
       energyTrend: "单位能耗趋势 (6个月)",
       energyTrendSub: "Energy Efficiency Trend (kWh/unit)",
       processDist: "关键工序能耗占比",
-      processDistSub: "Process Energy Consumption Distribution",
+      processDistSub: "Energy Consumption of Each Part",
       aiDiagnosis: "AI 诊断建议",
       aiFootnote:
         "* 以上建议基于过去 30 天的 IoT 传感器实时数据分析得出，算法模型：GreenLLM-v4。",
@@ -72,6 +72,31 @@ export const supplierDetail = {
         "Final Assy": "总装",
       },
       featureNotImplemented: "该功能目前暂未实现!",
+      compliancePart: {
+        title: "欧盟法规合规概览",
+        monitoring: "适用法规监测",
+        subtitle: "受 ESPR 与 CSRD 指令监管",
+        regulations: {
+          espr: "数字化产品护照 (ESPR)",
+          csrd: "可持续发展报告指令 (CSRD)",
+          csddd: "供应链尽职调查指令 (CSDDD)",
+        },
+        status: {
+          applicable: "适用",
+          exempted: "豁免",
+        },
+        progress: {
+          title: "合规准备进度",
+          dpp_completeness: "DPP 数据包完整度",
+          csrd_report_progress: "CSRD 年度报告进度",
+        },
+        actions: {
+          generate_dpp: "生成 DPP 数字化数据包",
+          generate_csrd: "生成 CSRD 报告摘要",
+        },
+        gaps: "关键合规差距",
+        footer_note: "* 数据已由本平台加密验证",
+      },
     },
   },
   en: {
@@ -88,7 +113,7 @@ export const supplierDetail = {
       energyTrend: "Energy Trend (6 Months)",
       energyTrendSub: "Energy Efficiency Trend (kWh/unit)",
       processDist: "Process Energy Distribution",
-      processDistSub: "Process Energy Consumption Distribution",
+      processDistSub: "Energy Consumption of Each Part",
       aiDiagnosis: "AI Recommendations",
       aiFootnote:
         "* Suggestions based on 30-day IoT sensor data. Model: GreenLLM-v4.",
@@ -148,6 +173,31 @@ export const supplierDetail = {
         "Final Assy": "Final Assy",
       },
       featureNotImplemented: "This feature is not implemented yet!",
+      compliancePart: {
+        title: "EU Regulatory Compliance Overview",
+        monitoring: "Applicable Regulations Monitoring",
+        subtitle: "Regulated by ESPR & CSRD",
+        regulations: {
+          espr: "Digital Product Passport (ESPR)",
+          csrd: "Sustainability Reporting (CSRD)",
+          csddd: "Supply Chain Due Diligence (CSDDD)",
+        },
+        status: {
+          applicable: "App.",
+          exempted: "Exmt.",
+        },
+        progress: {
+          title: "Compliance Readiness Progress",
+          dpp_completeness: "DPP Data Package Completeness",
+          csrd_report_progress: "CSRD Annual Reporting Progress",
+        },
+        actions: {
+          generate_dpp: "Generate DPP Digital Package",
+          generate_csrd: "Generate CSRD Report Summary",
+        },
+        gaps: "Key Compliance Gaps",
+        footer_note: "* Data encrypted & verified by platform",
+      },
     },
   },
 };

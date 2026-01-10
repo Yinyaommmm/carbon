@@ -38,6 +38,13 @@ export interface SupplierDetail {
   energy_trend: EnergyTrendPoint[];
   process_distribution: ProcessDistribution[];
   ai_suggestions: string[]; // AI 优化建议列表
+  regulations: {
+    dpp: boolean;
+    dpp_progress: number; // 0-100
+    csrd: boolean;
+    csrd_progress: number; // 0-100
+    csddd: boolean;
+  };
 }
 export const MOCK_SUPPLIERS: Record<string, SupplierDetail> = {
   S001: {
@@ -74,6 +81,13 @@ export const MOCK_SUPPLIERS: Record<string, SupplierDetail> = {
       "染整段预热温度降低 2°C，单批次能耗预计下降约 3%。",
       "夜间峰谷平电价切换，建议将高耗能定型工序调整至夜间运行，降低 5% 电费。",
     ],
+    regulations: {
+      dpp: true,
+      dpp_progress: 75,
+      csrd: true,
+      csrd_progress: 60,
+      csddd: false,
+    },
   },
   S002: {
     id: "S002",
@@ -109,6 +123,13 @@ export const MOCK_SUPPLIERS: Record<string, SupplierDetail> = {
       "部署 AI 预测性维护 system，减少设备空转时间，提升能效 4%。",
       "建议采用更高比例的可再生铝锭，可降低 Scope 3 排放约 15%。",
     ],
+    regulations: {
+      dpp: true,
+      dpp_progress: 65,
+      csrd: true,
+      csrd_progress: 60,
+      csddd: false,
+    },
   },
   S003: {
     id: "S003",
@@ -144,6 +165,13 @@ export const MOCK_SUPPLIERS: Record<string, SupplierDetail> = {
       "提高封装测试的一次性通过率（Yield Rate），减少废品碳足迹。",
       "考虑在厂房屋顶加装光伏板，越南日照条件可覆盖 15% 生产用电。",
     ],
+    regulations: {
+      dpp: true,
+      dpp_progress: 45,
+      csrd: true,
+      csrd_progress: 20,
+      csddd: true,
+    },
   },
   S004: {
     id: "S004",
@@ -179,6 +207,13 @@ export const MOCK_SUPPLIERS: Record<string, SupplierDetail> = {
       "持续利用北欧风电优势，Scope 2 排放仍有下降空间。",
       "推广生物质基纤维替代合成纤维，进一步优化产品生命周期评价 (LCA)。",
     ],
+    regulations: {
+      dpp: true,
+      dpp_progress: 45,
+      csrd: true,
+      csrd_progress: 20,
+      csddd: true,
+    },
   },
   S005: {
     id: "S005",
@@ -214,6 +249,13 @@ export const MOCK_SUPPLIERS: Record<string, SupplierDetail> = {
       "熔炼炉热损失严重，加固保温层可减少 15% 能源浪费。",
       "印度当地电力碳强度高，建议购买绿证或投资清洁能源项目。",
     ],
+    regulations: {
+      dpp: true,
+      dpp_progress: 45,
+      csrd: true,
+      csrd_progress: 20,
+      csddd: true,
+    },
   },
   S006: {
     id: "S006",
@@ -249,6 +291,13 @@ export const MOCK_SUPPLIERS: Record<string, SupplierDetail> = {
       "老化测试环节电力回收，将热能重新转化为电能或采暖。",
       "推进“零废弃工厂”计划，目前废弃物回收率已达 85%，可冲击 95%。",
     ],
+    regulations: {
+      dpp: true,
+      dpp_progress: 55,
+      csrd: true,
+      csrd_progress: 80,
+      csddd: false,
+    },
   },
   S007: {
     id: "S007",
@@ -284,6 +333,13 @@ export const MOCK_SUPPLIERS: Record<string, SupplierDetail> = {
       "目前燃煤比例较高，建议逐步切换为生物质锅炉或电锅炉。",
       "提高工人的 ESG 意识培训，减少因误操作导致的材料损耗。",
     ],
+    regulations: {
+      dpp: true,
+      dpp_progress: 55,
+      csrd: true,
+      csrd_progress: 80,
+      csddd: false,
+    },
   },
   S008: {
     id: "S008",
@@ -319,6 +375,13 @@ export const MOCK_SUPPLIERS: Record<string, SupplierDetail> = {
       "表面处理车间通风系统可引入智能感应，按需运行节能 8%。",
       "协同供应链上游供应商改用绿氢还原钢材，削减 Scope 3。",
     ],
+    regulations: {
+      dpp: true,
+      dpp_progress: 75,
+      csrd: true,
+      csrd_progress: 90,
+      csddd: true,
+    },
   },
   S009: {
     id: "S009",
@@ -354,6 +417,13 @@ export const MOCK_SUPPLIERS: Record<string, SupplierDetail> = {
       "工厂照明全部更换为 LED 智能感应灯具，年省电 5 万美金。",
       "建议寻找本地供应商以减少跨国物流产生的 Scope 3 碳足迹。",
     ],
+    regulations: {
+      dpp: true,
+      dpp_progress: 75,
+      csrd: true,
+      csrd_progress: 90,
+      csddd: true,
+    },
   },
   S010: {
     id: "S010",
@@ -389,5 +459,12 @@ export const MOCK_SUPPLIERS: Record<string, SupplierDetail> = {
       "冲压线电机能效较低，建议进行变频改造或直接更换高效电机。",
       "涂装车间废气燃烧热能未回收，建议增加 RTO 热能回用设备。",
     ],
+    regulations: {
+      dpp: true,
+      dpp_progress: 26,
+      csrd: true,
+      csrd_progress: 36,
+      csddd: true,
+    },
   },
 };

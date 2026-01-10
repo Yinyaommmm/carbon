@@ -22,7 +22,7 @@ const navItems: NavItem[] = [
 const dropdownItems = {
   name: "Value & Enablement",
   subItems: [
-    { name: "Compliance Hub", path: "/compliance" },
+    // { name: "Compliance Hub", path: "/compliance" },
     { name: "Incentive Engine", path: "/incentives" },
     { name: "Green Finance", path: "/finance" },
   ],

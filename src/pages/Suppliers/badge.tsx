@@ -9,11 +9,13 @@ interface ComplianceBadgeProps {
   level: ComplianceLevel;
   /** 国际化翻译函数 */
   t: (key: string) => string;
+  textSize?: number;
 }
 
 export const ComplianceBadge: React.FC<ComplianceBadgeProps> = ({
   level,
   t,
+  textSize = 11,
 }) => {
   // 3. 使用 Record 约束映射对象，确保覆盖所有枚举值
   const styles: Record<ComplianceLevel, string> = {
@@ -30,7 +32,7 @@ export const ComplianceBadge: React.FC<ComplianceBadgeProps> = ({
 
   return (
     <span
-      className={`px-3 py-1 rounded-full border text-[11px] font-bold flex items-center gap-1.5 w-fit ${styles[level]}`}
+      className={`px-3 py-1 rounded-full border text-[${textSize}px] font-bold flex items-center gap-1.5 w-fit ${styles[level]}`}
     >
       {icons[level]}
       {t(`supplier.compliance.${level.toLowerCase()}`)}

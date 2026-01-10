@@ -12,7 +12,6 @@ import {
   type LucideIcon,
   ChevronDown,
 } from "lucide-react";
-import * as Popover from "@radix-ui/react-popover";
 import { useNavigate, useParams } from "react-router-dom";
 import { MOCK_SUPPLIERS } from "../Suppliers/mockdata";
 import { EnergyLineChart } from "./EnergyLineChart";
@@ -20,6 +19,7 @@ import { EnergyPieChart } from "./EnergyPieChart";
 import { useTranslation } from "react-i18next";
 import { ComplianceBadge, type ComplianceLevel } from "../Suppliers/badge";
 import { toast } from "sonner";
+import Compliance from "./Compliance";
 interface MetricCardProps {
   icon: LucideIcon;
   label: string;
@@ -75,13 +75,13 @@ const SupplierDetail = () => {
           >
             <ArrowLeft size={16} /> {t("supplierDetail.backToList")}
           </button>
-          <div className="flex items-center justify-between">
+          {/* <div className="flex items-center justify-between">
             <ComplianceBadge level={data.compliance} t={t} />
             <ChevronDown
               size={14}
               className="text-slate-200 -rotate-90 opacity-0 group-hover:opacity-100 transition-all translate-x-2 group-hover:translate-x-0"
             />
-          </div>
+          </div> */}
         </div>
 
         {/* 第一行：基本信息卡片 */}
@@ -209,7 +209,7 @@ const SupplierDetail = () => {
         </div>
 
         {/* 第三行：图表与详细列表 */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch mb-8">
           <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white p-8 rounded-[40px] border border-slate-100 shadow-sm flex flex-col justify-between">
               <div>
@@ -263,6 +263,8 @@ const SupplierDetail = () => {
           </div>
         </div>
 
+        {/* 欧盟合规准入监测 板块 */}
+        <Compliance data={data} />
         {/* 底部备注 */}
         <div className="mt-12 text-center">
           <p className="text-[10px] font-black text-slate-300 uppercase tracking-widest">
