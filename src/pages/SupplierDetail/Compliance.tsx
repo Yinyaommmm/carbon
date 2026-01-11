@@ -11,8 +11,7 @@ import type { SupplierDetail } from "../Suppliers/mockdata";
 import { ComplianceBadge } from "../Suppliers/badge";
 import { useTranslation } from "react-i18next";
 import { toast } from "sonner";
-import { useEffect, useMemo, useState } from "react";
-import { COMPLIANCE_GAP_POOL, type GAPADVICE } from "./complianceMockData";
+import { COMPLIANCE_GAP_POOL } from "./complianceMockData";
 
 interface ComplianceProps {
   data: SupplierDetail;

@@ -7,6 +7,8 @@ import { landing } from "./i18n_detail/landingpage";
 import { greenFiance } from "./i18n_detail/greenFiance";
 import { dashboard } from "./i18n_detail/dashboard";
 import { supplierDetail } from "./i18n_detail/detail";
+import { incentive } from "./i18n_detail/incentiveEngine";
+import { settings } from "./i18n_detail/settings";
 // 翻译资源文件 (假数据示例)
 const resources = {
   en: {
@@ -19,6 +21,8 @@ const resources = {
       supplier: supplier.en.supplier,
       supplierDetail: supplierDetail.en.supplierDetail,
       greenFiance: greenFiance.en.greenFiance,
+      incentive: incentive.en.incentive,
+      settings: settings.en.settings,
     },
   },
   zh: {
@@ -30,6 +34,8 @@ const resources = {
       supplier: supplier.zh.supplier,
       supplierDetail: supplierDetail.zh.supplierDetail,
       greenFiance: greenFiance.zh.greenFiance,
+      incentive: incentive.zh.incentive,
+      settings: settings.zh.settings,
     },
   },
 };

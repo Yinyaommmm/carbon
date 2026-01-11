@@ -45,6 +45,18 @@ export interface SupplierDetail {
     csrd_progress: number; // 0-100
     csddd: boolean;
   };
+  incentive: {
+    weight: string;
+    carbon: number;
+    energy: number;
+    transparency: number;
+    compliance: number;
+    remark:
+      | "Industry Leader"
+      | "Stable Performance"
+      | "High Risk Edge"
+      | "Efficiency Boost Needed";
+  };
 }
 export const MOCK_SUPPLIERS: Record<string, SupplierDetail> = {
   S001: {
@@ -88,6 +100,14 @@ export const MOCK_SUPPLIERS: Record<string, SupplierDetail> = {
       csrd_progress: 60,
       csddd: false,
     },
+    incentive: {
+      weight: "40%",
+      carbon: 95,
+      energy: 88,
+      transparency: 92,
+      compliance: 90,
+      remark: "Industry Leader",
+    },
   },
   S002: {
     id: "S002",
@@ -129,6 +149,14 @@ export const MOCK_SUPPLIERS: Record<string, SupplierDetail> = {
       csrd: true,
       csrd_progress: 60,
       csddd: false,
+    },
+    incentive: {
+      weight: "30%",
+      carbon: 80,
+      energy: 82,
+      transparency: 88,
+      compliance: 90,
+      remark: "Stable Performance",
     },
   },
   S003: {
@@ -172,6 +200,14 @@ export const MOCK_SUPPLIERS: Record<string, SupplierDetail> = {
       csrd_progress: 20,
       csddd: true,
     },
+    incentive: {
+      weight: "20%",
+      carbon: 65,
+      energy: 70,
+      transparency: 75,
+      compliance: 78,
+      remark: "Efficiency Boost Needed",
+    },
   },
   S004: {
     id: "S004",
@@ -213,6 +249,14 @@ export const MOCK_SUPPLIERS: Record<string, SupplierDetail> = {
       csrd: true,
       csrd_progress: 20,
       csddd: true,
+    },
+    incentive: {
+      weight: "10%",
+      carbon: 60,
+      energy: 58,
+      transparency: 68,
+      compliance: 70,
+      remark: "High Risk Edge",
     },
   },
   S005: {
@@ -256,6 +300,14 @@ export const MOCK_SUPPLIERS: Record<string, SupplierDetail> = {
       csrd_progress: 20,
       csddd: true,
     },
+    incentive: {
+      weight: "15%",
+      carbon: 92,
+      energy: 88,
+      transparency: 95,
+      compliance: 98,
+      remark: "Industry Leader",
+    },
   },
   S006: {
     id: "S006",
@@ -297,6 +349,14 @@ export const MOCK_SUPPLIERS: Record<string, SupplierDetail> = {
       csrd: true,
       csrd_progress: 80,
       csddd: false,
+    },
+    incentive: {
+      weight: "10%",
+      carbon: 55,
+      energy: 52,
+      transparency: 60,
+      compliance: 62,
+      remark: "High Risk Edge",
     },
   },
   S007: {
@@ -340,6 +400,14 @@ export const MOCK_SUPPLIERS: Record<string, SupplierDetail> = {
       csrd_progress: 80,
       csddd: false,
     },
+    incentive: {
+      weight: "18%",
+      carbon: 90,
+      energy: 94,
+      transparency: 92,
+      compliance: 96,
+      remark: "Industry Leader",
+    },
   },
   S008: {
     id: "S008",
@@ -381,6 +449,14 @@ export const MOCK_SUPPLIERS: Record<string, SupplierDetail> = {
       csrd: true,
       csrd_progress: 90,
       csddd: true,
+    },
+    incentive: {
+      weight: "14%",
+      carbon: 72,
+      energy: 70,
+      transparency: 75,
+      compliance: 78,
+      remark: "Stable Performance",
     },
   },
   S009: {
@@ -424,6 +500,14 @@ export const MOCK_SUPPLIERS: Record<string, SupplierDetail> = {
       csrd_progress: 90,
       csddd: true,
     },
+    incentive: {
+      weight: "9%",
+      carbon: 42,
+      energy: 33,
+      transparency: 55,
+      compliance: 68,
+      remark: "Efficiency Boost Needed",
+    },
   },
   S010: {
     id: "S010",
@@ -465,6 +549,14 @@ export const MOCK_SUPPLIERS: Record<string, SupplierDetail> = {
       csrd: true,
       csrd_progress: 36,
       csddd: true,
+    },
+    incentive: {
+      weight: "11%",
+      carbon: 59,
+      energy: 61,
+      transparency: 64,
+      compliance: 66,
+      remark: "High Risk Edge",
     },
   },
 };

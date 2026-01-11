@@ -5,6 +5,7 @@ import { NavLink, useLocation, useMatch } from "react-router-dom";
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 import { Menu, ChevronDown, Globe } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import LanguageToggle from "./SwitchLangBtn";
 // --- 1. 配置数据结构 ---
 
 type NavItem = {
@@ -201,22 +202,7 @@ const Navbar = () => {
           </div>
 
           {/* 右侧：操作/语言切换 */}
-          <div className="flex items-center space-x-4">
-            <button
-              onClick={toggleLanguage}
-              className="p-2 rounded-full text-gray-600 hover:bg-gray-100 hover:text-green-600 transition-colors flex items-center focus:outline-none"
-              aria-label="Toggle Language"
-            >
-              <Globe className="w-5 h-5" />
-              <span className="ml-1 text-sm font-medium">
-                {t("navbar.cur_lang")}: {t("navbar.language_switch")}
-              </span>
-            </button>
-
-            <button className="md:hidden p-2 rounded-full text-gray-600 hover:bg-gray-100 transition-colors focus:outline-none">
-              <Menu className="w-6 h-6" />
-            </button>
-          </div>
+          <LanguageToggle toggleLanguage={toggleLanguage}></LanguageToggle>
         </div>
       </div>
     </nav>

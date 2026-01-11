@@ -31,7 +31,13 @@ export default function Suppliers() {
         filterCompliance === "All" || s.compliance === filterCompliance;
       return matchSearch && matchIndustry && matchCountry && matchCompliance;
     });
-  }, [searchTerm, filterIndustry, filterCountry, filterCompliance]);
+  }, [
+    convertedData,
+    searchTerm,
+    filterIndustry,
+    filterCountry,
+    filterCompliance,
+  ]);
   const navigate = useNavigate();
   const handleRowClick = (id: string) => {
     navigate("/suppliers/" + id);

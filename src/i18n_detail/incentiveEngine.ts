@@ -1,0 +1,121 @@
+export const incentive = {
+  zh: {
+    incentive: {
+      header: {
+        title: "激励引擎 (Incentive Engine)",
+        subtitle: "基于 ESG 表现的动态订单配额与权益激励系统",
+      },
+      analysis: {
+        radar_title: "ESG 表现对比分析",
+        selected: "当前选定",
+        industry_avg: "行业平均",
+        current_corp: "当前企业",
+        score_label: "ESG Score",
+      },
+      allocation: {
+        title: "订单权重与专项激励",
+        stats_prefix: "当前统计",
+        share_label: "Current Share",
+        legend_title: "图表颜色含义",
+      },
+      tiers: {
+        s_class: "第一梯队 (S级)",
+        s_desc: "优先扩充 10%",
+        a_class: "第二梯队 (A级)",
+        a_desc: "配额保持稳定",
+        b_class: "第三梯队 (B级)",
+        b_desc: "维持观察阶段",
+        c_class: "待观察梯队 (C级)",
+        c_desc: "缩减意向份额",
+      },
+      rules: {
+        quota_title: "配额动态递增",
+        quota_desc: "ESG 每提升 5 分，系统自动增加 2.5% 季度订单权重。",
+        payment_title: "财务账期优待",
+        payment_desc: "ESG 评分 A 级以上，付款账期由 T+60 缩短至 T+30。",
+        subsidy_title: "数字化转型补贴",
+        subsidy_desc: "绩效排名前 3%，可获 15% 能源监测设备采购补贴。",
+      },
+      table: {
+        title: "供应商激励名录",
+        helper: "点击行可切换上方图表分析对象",
+        col_name: "供应商名称",
+        col_score: "ESG 总评分",
+        col_weight: "订单权重份额",
+        col_status: "激励状态",
+      },
+      metrics: {
+        esg_score: "ESG 总评分",
+        avg_energy: "平均能效水平",
+        data_transparency: "数据透明系数",
+        resilience: "供应链韧性指数",
+      },
+      remarks: {
+        "Industry Leader": "行业领跑者",
+        "Stable Performance": "表现稳健",
+        "High Risk Edge": "高风险边缘",
+        "Efficiency Boost Needed": "需提升能效",
+      },
+    },
+  },
+  en: {
+    incentive: {
+      header: {
+        title: "Incentive Engine",
+        subtitle: "Dynamic Quota & Benefit System Based on ESG",
+      },
+      analysis: {
+        radar_title: "ESG Performance Analysis",
+        selected: "Selected",
+        industry_avg: "Industry Avg",
+        current_corp: "Current Corp",
+        score_label: "ESG Score",
+      },
+      allocation: {
+        title: "Order Weights & Incentives",
+        stats_prefix: "Statistics",
+        share_label: "Current Share",
+        legend_title: "Legend Meanings",
+      },
+      tiers: {
+        s_class: "Tier 1 (S-Class)",
+        s_desc: "Priority Expansion 10%",
+        a_class: "Tier 2 (A-Class)",
+        a_desc: "Stable Quota",
+        b_class: "Tier 3 (B-Class)",
+        b_desc: "Observation Stage",
+        c_class: "Tier 4 (C-Class)",
+        c_desc: "Reduce Intent Share",
+      },
+      rules: {
+        quota_title: "Dynamic Quota Growth",
+        quota_desc:
+          "Every 5pt ESG gain adds 2.5% quarterly weight automatically.",
+        payment_title: "Payment Term Benefits",
+        payment_desc: "Grade A+ reduces payment cycle from T+60 to T+30.",
+        subsidy_title: "Digital Subsidy",
+        subsidy_desc: "Top 3% performers get 15% energy monitoring subsidy.",
+      },
+      table: {
+        title: "Supplier Incentive Directory",
+        helper: "Click row to switch analysis target",
+        col_name: "Supplier Name",
+        col_score: "ESG Total Score",
+        col_weight: "Order Weight",
+        col_status: "Incentive Status",
+      },
+      metrics: {
+        esg_score: "ESG Score",
+        avg_energy: "Avg Energy Level",
+        data_transparency: "Transparency Coeff",
+        resilience: "Resilience Index",
+      },
+      remarks: {
+        "Industry Leader": "Industry Leader",
+        "Stable Performance": "Stable Performance",
+        "High Risk Edge": "High Risk Edge",
+        "Efficiency Boost Needed": "Efficiency Boost Needed",
+      },
+    },
+  },
+};

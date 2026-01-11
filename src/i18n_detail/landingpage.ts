@@ -41,7 +41,7 @@ export const landing = {
         m2_title: "碳之洞见",
         m2_subtitle: "AI 流程优化",
         m2_detail: "工艺级 AI 降碳优化、数字孪生建模、碳风险预警。",
-        m3_title: "激励殷勤",
+        m3_title: "激励引擎",
         m3_subtitle: "商业驱动机制",
         m3_detail:
           "ESG 综合评分、订单权重机制、绿色金融对接，激励供应商主动减排。",
